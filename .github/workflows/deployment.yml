@@ -13,7 +13,7 @@ jobs:
       - name: secrets
         run: echo "MY_SECRET_ENV=${{ secrets.MY_SECRET_ENV}}"
       - name: envs
-        run: echo "MY_ENV=${{ var.MY_ENV}}"
+        run: echo "MY_ENV=${{ vars.MY_ENV}}"
 
       
   deploy-production:
@@ -24,4 +24,4 @@ jobs:
       - name: secrets
         run: echo "MY_SECRET_ENV=${{ secrets.MY_SECRET_ENV}}"
       - name: envs
-        run: echo "MY_ENV=${{ var.MY_ENV}}"
+        run: echo "MY_ENV=${{ vars.MY_ENV}}"
