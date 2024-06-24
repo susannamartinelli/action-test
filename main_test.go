@@ -8,7 +8,7 @@ import (
 )
 
 func TestStatusHandler(t *testing.T) {
-    req, err := http.NewRequest("GET", "/status", nil)
+    req, err := http.NewRequest("GET", "/statusy", nil)
     if err != nil {
         t.Fatal(err)
     }
