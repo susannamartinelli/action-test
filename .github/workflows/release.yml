@@ -16,7 +16,7 @@ jobs:
     steps:
     - name: Enable Debug Logging
       run: echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
-      
+
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -41,5 +41,5 @@ jobs:
       with:
         upload_url: https://api.github.com/repos/susannamartinelli/action-test/releases
         asset_path: ./test-action
-        asset_name: test-action-${{ matrix.os }}-go${{ matrix.version }}
+        asset_name: test-action
         asset_content_type: application/octet-stream
