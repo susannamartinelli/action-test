@@ -16,6 +16,7 @@ jobs:
         run: echo "MY_ENV=${{ vars.MY_ENV}}"
 
   deploy-preproduction:
+    timeout-minutes: 1
     runs-on: windows-latest
     needs: deploy-staging
     environment: preproduction
@@ -34,5 +35,6 @@ jobs:
     steps:
       - name: secrets
         run: echo "MY_SECRET_ENV=${{ secrets.MY_SECRET_ENV}}"
+        timeout-minutes: 1
       - name: envs
         run: echo "MY_ENV=${{ vars.MY_ENV}}"
