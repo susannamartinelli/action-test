@@ -15,6 +15,14 @@ jobs:
       - name: envs
         run: echo "MY_ENV=${{ vars.MY_ENV}}"
 
+  deploy-preproduction:
+    runs-on: windows-latest
+    environment: preproduction
+    steps:
+      - name: secrets
+        run: echo "MY_SECRET_ENV=${{ secrets.MY_SECRET_ENV}}"
+      - name: envs
+        run: echo "MY_ENV=${{ vars.MY_ENV}}"
       
   deploy-production:
     runs-on: windows-latest
