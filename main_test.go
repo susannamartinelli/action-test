@@ -7,8 +7,8 @@ import (
     "testing"
 )
 
-func TestStatusHandler(t *testing.T) {
-    req, err := http.NewRequest("GET", "/statusy", nil)
+func TestStatusHandler(t *testing.T) {./
+    req, err := http.NewRequest("GET", "/status", nil)
     if err != nil {
         t.Fatal(err)
     }
