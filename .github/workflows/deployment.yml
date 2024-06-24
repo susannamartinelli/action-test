@@ -17,8 +17,11 @@ jobs:
 
   deploy-preproduction:
     runs-on: windows-latest
+    needs: deploy-staging
     environment: preproduction
     steps:
+      - name: message
+        run: echo "Questo env non esiste!!"
       - name: secrets
         run: echo "MY_SECRET_ENV=${{ secrets.MY_SECRET_ENV}}"
       - name: envs
@@ -26,7 +29,7 @@ jobs:
       
   deploy-production:
     runs-on: windows-latest
-    needs: deploy-staging
+    needs: deploy-preproduction
     environment: production
     steps:
       - name: secrets
