@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-staging:
-    runs-on: windows
+    runs-on: windows-latest
     environment: staging
     steps:
       - name: secrets
@@ -17,7 +17,7 @@ jobs:
 
       
   deploy-production:
-    runs-on: windows
+    runs-on: windows-latest
     needs: deploy-staging
     environment: production
     steps:
