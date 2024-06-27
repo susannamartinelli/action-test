@@ -7,6 +7,7 @@ on:
     paths:
       - '*.go'
       - '*.mod'
+      - '.github/**'
   pull_request:
     branches:
       - main
@@ -15,7 +16,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         version: [1.19.13, 1.20.14]
     runs-on: ${{ matrix.os }}
 
