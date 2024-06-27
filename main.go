@@ -6,7 +6,7 @@ import (
     "os"
 )
 
-var version = "1.0.0" // Set this to the current version of your app
+var version = "1.0.0" 
 
 func statusHandler(w http.ResponseWriter, r *http.Request) {
     response := map[string]string{"version": version}
